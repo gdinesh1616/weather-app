@@ -1,0 +1,27 @@
+.FutureWeatherCard{
+    height:83vh;
+    width:53vw;
+    min-width: fit-content;
+    background-color:#BFDBFE;
+    border-radius: 1rem;
+    margin:10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.details{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    margin-top:10px;
+    gap:10px;
+}
+.details div{
+    width:100px;
+    min-width: fit-content;
+}
+@media (max-width:1020px) {
+    .FutureWeatherCard{
+        width:90%;
+        min-width:fit-content;
+    }
+    
+}

@@ -1,0 +1,76 @@
+.card{
+    background: linear-gradient(to bottom,#b6e7ff,#00a6f9);
+    height:80vh;
+    min-height: fit-content;
+    width:40vw;
+    min-height: fit-content;
+    min-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 10px;
+    justify-self: start;
+    margin:10px 10px 10px 20px;
+    align-items: space-evenly;
+    border-radius:1rem;
+    padding:10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.location{
+    font-size:1.5rem;
+    justify-self: center;
+    display:block;
+    grid-column: 1/3;
+    padding-top:10px;
+}
+.weatherDescription{
+    grid-column:1/3;
+    justify-self:center;
+    font-size:1.2rem;
+}
+.weatherDescription div{
+
+    margin:auto;
+}
+.temperature{
+    justify-items: center;
+    
+}
+.humidity{
+    justify-items: center;
+}
+.label{
+    font-size:1.2rem;
+}
+.value{
+    font-size:1.5rem;
+}
+.date{
+   justify-self: center;
+}
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #a3a3a3;
+  margin: 20px 0;
+  display: block;
+  width:90%;
+}
+.header{
+    font-size:1.5rem;
+    font-weight: 700;
+    grid-column: 1/3;
+    display:block;
+    margin:10px;
+    width:100%;
+}
+.value2{
+    font-size:1rem;
+
+}
+@media (max-width:1020px) {
+    .card{
+        width:90%
+    }
+    
+}
