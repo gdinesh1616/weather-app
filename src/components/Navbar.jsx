@@ -15,7 +15,7 @@ export default function Navbar({setLocationKey,setCityInfo}) {
             const url = `https://dataservice.accuweather.com/locations/v1/cities/search?q=${city}`;
 
             const response = await axios.get(url,  {headers: {
-                "Authorization": `Bearer ${import.meta.env.VITE_APIKEY}`,
+                "Authorization": `${import.meta.env.VITE_APIKEY}`,
                 "Accept-Encoding": "gzip",
             },})
 

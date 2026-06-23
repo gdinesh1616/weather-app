@@ -24,7 +24,7 @@ export default function FutureWeatherCard (prop) {
                 const url = `https://dataservice.accuweather.com/forecasts/v1/daily/10day/${prop.locationKey}?details=true`
                     const response = await axios.get( url , {
                         headers: {
-                            "Authorization": `Bearer ${import.meta.env.VITE_APIKEY}`,
+                            "Authorization": `${import.meta.env.VITE_APIKEY}`,
                             "Accept-Encoding": "gzip",
                         },})
                     setData(response.data);

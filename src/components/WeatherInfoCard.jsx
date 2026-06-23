@@ -21,7 +21,7 @@ export default function WeatherInfoCard(prop) {
                 const url = `https://dataservice.accuweather.com/currentconditions/v1/${prop.locationKey}?details=true`
                 const response = await axios.get( url , {
                         headers: {
-                            "Authorization": `Bearer ${import.meta.env.VITE_APIKEY}`,
+                            "Authorization": `${import.meta.env.VITE_APIKEY}`,
                             "Accept-Encoding": "gzip",
                         },});
                 setData(response.data);
