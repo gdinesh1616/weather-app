@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../css/Navbar.css'
 import axios from 'axios';
+import { toast } from 'react-toastify';
+
 export default function Navbar({setLocationKey,setCityInfo}) {
 
     const [city, setCity] = useState([]);
@@ -12,6 +14,9 @@ export default function Navbar({setLocationKey,setCityInfo}) {
         e.preventDefault();
 
         try{
+            if(!city){
+                toast.error("please Enter the location");
+            }
             const url = `https://dataservice.accuweather.com/locations/v1/cities/search?q=${city}`;
 
             const response = await axios.get(url,  {headers: {

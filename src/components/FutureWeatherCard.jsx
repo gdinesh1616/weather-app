@@ -33,7 +33,9 @@ export default function FutureWeatherCard (prop) {
             }
             }
 
+        if(prop.locationKey){
             fetchData();
+        }
         },[prop.locationKey])
 
 

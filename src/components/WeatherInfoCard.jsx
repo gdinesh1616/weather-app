@@ -31,8 +31,10 @@ export default function WeatherInfoCard(prop) {
                 toast.error(e.message);
             }
         }
+        if(prop.locationKey){
+            fetchData();
+        }
 
-        fetchData();
 
     },[prop.locationKey])
 
