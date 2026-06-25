@@ -10,10 +10,12 @@ const [cityInfo, setCityInfo] = useState();
     return (
         <>
               <Navbar setLocationKey={setLocationKey} setCityInfo={setCityInfo}></Navbar>
-              <div className="homePage">
+              {locationKey && <div className="homePage">
                 <WeatherInfoCard locationKey={locationKey} cityInfo={cityInfo}></WeatherInfoCard>
                 <FutureWeatherCard locationKey={locationKey} cityInfo={cityInfo}></FutureWeatherCard>
-              </div>
+              </div>}
+              {!locationKey && <div className="emptyState">
+                ⚠️ Search location to know the weather</div>}
 
         </>
     )
